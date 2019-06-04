@@ -18,5 +18,18 @@ namespace UnitTests.Models
             //Assert
             Assert.IsNotNull(result);
         }
+
+        [TestMethod]
+        public void ReportViewModel_GetLogViewModel_Default_Should_Pass()
+        {
+            //Arrange
+            var result = new ReportViewModel();
+
+            //Act
+            LogViewModel model = result.LogViewModel;
+            
+            //Assert
+            Assert.AreEqual(result.LogViewModel, model);
+        }
     }
 }

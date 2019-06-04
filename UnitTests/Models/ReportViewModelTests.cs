@@ -44,5 +44,19 @@ namespace UnitTests.Models
             //Assert
             Assert.AreEqual(result.NumberOfUsers, users);
         }
+
+        [TestMethod]
+        public void ReportViewModel_SetLogViewModel_Default_Should_Pass()
+        {
+            //Arrange
+            var result = new ReportViewModel();
+            LogViewModel fresh = new LogViewModel();
+
+            //Act
+            result.LogViewModel = fresh;
+
+            //Assert
+            Assert.AreEqual(result.LogViewModel, fresh);
+        }
     }
 }
